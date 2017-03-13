@@ -1,0 +1,233 @@
+@font-face{
+  font-family: "fuente";
+  src :url('../../probert.otf');
+}
+body{
+  min-height: 100%;
+}
+
+nav{
+  background-color: transparent;
+  margin-top:  0px;
+
+}
+
+h1, h3, h2, a, b{
+  font-family: "fuente";
+
+}
+.h1headline, .h3headline{
+  color : #e9e9e9;
+  margin-bottom: 20px;
+}
+
+.h1headline{
+  margin-top : 40px;
+}
+
+.navbar-left {
+  width:120px;
+  height :90px;
+  margin-left: 30px;
+}
+
+.fondo{
+  background-image: url('../../Imagenes/fondofinal5.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.btn-accion{
+  background-color: Transparent;
+  border-color: #e2e9e7;
+  color: #e2e9e7;
+
+}
+
+.pull-right{
+  margin-top: 20px;
+  margin-right: 5%;
+}
+
+.img-funcion{
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+
+.contenido{
+  padding-top: 80px;
+}
+
+.fondo{
+  height:950px;
+  margin:0px;
+  padding : 0 px;
+}
+
+.imagenlanding{
+  max-height: 630px;
+
+}
+
+.main{
+  vertical-align: middle;
+}
+
+.btn-unirse{
+  margin: auto;
+  width :170px;
+  height :50px;
+  padding: auto;
+  padding-top: 15px;
+  margin-top: 20px;
+  margin-bottom: 40PX;
+  border-color: #e2e9e7;
+  color : #e2e9e7;
+  background-color: rgb(255,163,19);
+  font-size: 15px;
+
+}
+
+.btn-unirse:hover{
+  background-color:#f95a00;
+  color:white;
+}
+
+.btn-accion:hover{
+  background-color: rgb(255,163,19);
+  color:white;
+}
+
+.rowfunciones{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.funcionalidad{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+}
+
+.container-fluid{
+  padding : 0px;
+}
+
+.centrar{
+  position: relative;
+   top: 40%;
+   transform: translateY(-50%);
+   padding-left: 12%;
+   padding-right: 12%;
+
+
+}
+.fondo-headline{
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+
+  padding-top: 10px;
+  padding-bottom: 15px;
+
+}
+
+.unete{
+  background-image: url('../../Imagenes/unete2.png');
+  background-repeat: no-repeat;
+
+  height : 380px;
+  width: 600px;
+}
+
+.unetebtn{
+  top : 58%;
+  left: 0;
+
+
+  position: absolute;
+}
+.btnzelda{
+
+  color: #e2e9e7;
+background-color: rgb(255,163,19);
+  font-size: 15px;
+  max-height :35px;
+  border-color: #e2e9e7;
+  color : #e2e9e7;
+}
+.btnzelda:hover{
+  background-color:#f95a00;
+  color:white;
+}
+.btnzelda.active{
+  box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+body{
+  background-color: #e2e2e2;
+}
+.funcion{
+  color : rgb(0, 194, 31);
+}
+
+p{
+  font-size: 20px;
+}
+
+.banner{
+  position: relative;
+  margin-top: 20px;
+}
+
+.logos{
+  background-color: rgb(207, 202, 203);
+
+}
+.banda {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.logo{
+    padding-bottom: 10px;
+}
+.paja, .rowfunciones,.paja2, .pajafinal{
+  background-color: #519a49;
+  background-color: rgba(83,182,33,0.35);
+}
+.imagen{
+  max-height: 300px;
+  padding-top: 2%;
+}
+.paja, .rowfunciones, .paja2, .pajafinal{
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.info{
+  padding-top: 5%;
+}
+.rowfunciones{
+  padding-top: 120px;
+}
+.imgfuncion{
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.pajafinal{
+  padding-bottom: 50px;
+}
+.titulo{
+  font-weight: bold;
+}
+hr{
+  background-color: black;
+  color: black;
+}
+.colorspan{
+
+  color:  rgb(255,163,19);
+}
