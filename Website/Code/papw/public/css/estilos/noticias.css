@@ -1,0 +1,18 @@
+.cont{
+  padding-left: 7%;
+  padding-right: 7%;
+  text-align: center;
+}
+
+/*ENCABEZADO*/
+.subtitulo{
+  margin-top: 0;
+  color:rgba(0, 0, 0, 0.5);
+}
+.redactor{
+  color: orange;
+}
+.imagenNoticia{
+  margin: auto;
+}
+/*ENCABEZADO*/

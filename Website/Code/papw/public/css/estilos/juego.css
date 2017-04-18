@@ -1,0 +1,16 @@
+/*JUEGO*/
+.juego{
+  border-radius: 5px;
+  background-color: rgba(5, 52, 58, 0.5);
+}
+.cont{
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.imgJuego{
+  margin:0 auto;
+}
+.informacion{
+  text-align: left;
+}
+/*JUEGO*/

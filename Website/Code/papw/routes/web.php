@@ -13,4 +13,8 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('principal');
+
+Route::get('/juego','juegoController@verJuego');
+Route::get('/noticia','aplicacionController@verNoticia');
+Route::get('/review','aplicacionController@verReview');
