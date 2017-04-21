@@ -13,4 +13,10 @@ class aplicacionController extends Controller
     public function verReview(Request $req){
       return view('Reviews.review');
     }
+    public function paginaPrincipal(Request $req){
+      return view('Principal');
+    }
+    public function verPerfil(Request $req){
+      return view('usuarios.usuario');
+    }
 }

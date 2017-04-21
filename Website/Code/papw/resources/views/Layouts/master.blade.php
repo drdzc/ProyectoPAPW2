@@ -28,15 +28,20 @@
 
         <div class="collapse navbar-collapse  " id="navbar-1">
           <ul class="nav navbar-nav categorias">
-            <li><a href="" class="texto">Noticias</a></li>
+            <li class=""><a href="" class="texto">Noticias</a></li>
             <li><a href="" class="texto">Reseñas</a></li>
             <li><a href="" class="texto">Juegos</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right ">
-            <li class="dropdown">
-              <a href=""><img src="../imagenes/logo.png" alt="" class="img-circle perfil"></a>
+
+          <ul class="nav navbar-nav navbar-right perfilUL ">
+            <li class="a">
+                <a href="" class=""><img src="../imagenes/logo.png" alt="" class="img-circle perfil"></a>
+            </li>
+            <!--
+            <li class="dropdown perfil">
+
               <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="caret"></span></a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu perfilULLI">
                 <li><a href="#">Ir a Perfil</a></li>
                 <li><a href="#">Editar Perfil</a></li>
                 <li  class="divider"></li>
@@ -44,14 +49,17 @@
                   <a href="">Salir</a>
                 </li>
             </ul>
-            </li>
+          </li>-->
+          <li>
+            <a href="" class="texto">Salir</a>
+          </li>
           </ul>
           <form action="" class="navbar-form navbar-right" role="search">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="buscar">
               <span class="input-group-btn">
-       <button class="btn btn-secondary" type="button"><span class="glyphicon glyphicon-search"></span></button>
-     </span>
+                <button class="btn btn-secondary" type="button"><span class="glyphicon glyphicon-search"></span></button>
+              </span>
             </div>
           </form>
 

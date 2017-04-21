@@ -2,15 +2,109 @@
 .juego{
   border-radius: 5px;
   background-color: rgba(5, 52, 58, 0.5);
+
 }
 .cont{
-  padding-left: 7%;
-  padding-right: 7%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 .imgJuego{
-  margin:0 auto;
+  margin: auto;
+  vertical-align: middle;
+  max-height: 295px;
+  max-width: 268px;
 }
 .informacion{
   text-align: left;
 }
+.informacion h1{
+  text-align: center;
+}
+.informacion span{
+  font-weight: bold;
+}
+.informacion a{
+  color:#333;
+}
+.informacion a:hover{
+  color: rgb(255,163,19);
+}
+.calificacion{
+  text-align: center;
+}
 /*JUEGO*/
+
+
+/*RESEÑAS*/
+.datos{
+  background-clip: content-box;
+  background-color: rgba(78, 168, 33, 0.4);
+}
+.resena h3, .resena p{
+  margin:auto;
+}
+.resena img{
+  margin: auto;
+  opacity: 0.5
+}
+.resena p{
+  text-align: center;
+}
+.resena a:hover{
+  color:rgb(255,163,19);
+}
+.resena span{
+  color: rgb(255,163,19);
+  font-weight: bold;
+  font-size: 14px;
+}
+.resena small{
+  opacity: 0.7;
+}
+
+/*RESEÑAS*/
+
+/*RELACIONADOS*/
+.relacionado img, .relacionado a{
+  margin: auto;
+  vertical-align: middle;
+  max-height: 295px;
+  max-width: 268px;
+}
+.relacionado p{
+  font-size: 18px;
+}
+/*RELACIONADOS*/
+
+
+
+/*JUEGOS*/
+.separador{
+  border: 0;
+  border-top: 1px solid orange;
+  display: inline;
+  vertical-align: middle;
+  margin-top: 40px;
+  padding: 0;
+}
+.multiplataforma h2{
+  padding: 0;
+  display: inline-block;
+}
+
+/*CARRUSEL*/
+.esconder{
+  visibility: hidden;
+}
+.juego2 img{
+  margin: auto;
+  width:150px;
+  max-height: 200px;
+}
+.destacado img{
+  margin: auto;
+  max-height: 350px;
+}
+/*CARRUSEL*/
+
+/*JUEGOS*/

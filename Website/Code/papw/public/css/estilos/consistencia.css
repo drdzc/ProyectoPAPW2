@@ -9,7 +9,7 @@ h1, h3, h2, a, b{
 body{
   margin: 0;
   padding: 0;
-  background-color: rgba(137, 242, 120,0.3);
+  background-color: rgba(137, 242, 120,0.2);
 }
 .cont{
   padding-left: 7%;
@@ -26,15 +26,17 @@ body{
            text-align: center;
        }
    }
-a.navbar-brand, li.dropdown>a{
+a.navbar-brand, li.a a{
   padding: 0;
   margin-top: 0;
-  padding-top:10px;
-  margin-right: 50%;
+  padding-left: 20px;
+
 }
 .navbar-brand img, .perfil{
   width: 75px;
   height: 50px;
+  margin: 0;
+  padding: 0px;
 }
 
 .navbar{
@@ -54,4 +56,14 @@ ul.categorias li{
 li a:hover{
   color: red;
 }
+
+.perfilUL li a{
+
+
+}
+.a, .a a, .perfilUL li{
+
+
+}
+
 /*NAVBAR*/

@@ -1,0 +1,139 @@
+/*CARRUSEL*/
+.imgCarrusel{
+  width: 1200px;
+  height:300px !important;
+  margin:0 auto;
+  opacity: 0.7
+}
+.carousel-caption{
+  background-color: rgba(0,0,0,0.5);
+
+}
+.tipo{
+  color:rgb(255,163,19);
+  font-size: 14px;
+  font-weight: bold;
+}
+/*CARRUSEL*/
+/*NUEVO USUARIOS*/
+.nuevoUsuarios{
+
+}
+/*NUEVO USUARIOS*/
+
+/*BARRA LATERAL*/
+.barra{
+  background-color: rgba(78, 168, 33, 0.4);
+  padding: 0;
+}
+.lanzamiento{
+    background-color: rgba(78, 168, 33, 1);
+    color:#e9e9e9;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.lanzamiento h3{
+  margin: auto;
+}
+.ver{
+  background-color: rgb(255,163,19);
+  color: #e9e9e9;
+  border-radius: 5px;
+}
+.juego{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+.juego a{
+
+}
+/*BARRA LATERAL*/
+
+/*UTIMAS RESEÑAS*/
+.ols{
+  visibility: hidden;
+}
+.ultimasResenas{
+  width: 100%;
+  padding: 0;
+
+}
+.juegoResenado{
+  display: inline-block !important;
+
+}
+.juegoResenado img{
+  max-width: 80px;
+  height: 150px;
+  margin: auto;
+  padding-top: 20px;
+}
+.slide{
+  background-color: rgba(5, 52, 58,0.5);
+}
+.tituloSlide{
+  color: #e9e9e9;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+.calificacion{
+  margin-bottom: 15px;
+}
+/*UTIMAS RESEÑAS*/
+
+/*NOTICIAS*/
+.noticia h3, .noticia p{
+  margin:auto;
+}
+.noticia img{
+  margin: auto;
+}
+.noticia p{
+  text-align: justify;
+
+}
+.noticia a:hover{
+  color:rgb(255,163,19);
+}
+.noticia span{
+  color: rgb(255,163,19);
+}
+.noticia small{
+  opacity: 0.7;
+}
+.verMasNoticias{
+  padding-top: 200px;
+  margin-top: 200px;
+}
+/*NOTICIAS*/
+
+/*RESEÑAS*/
+.resena h3, .resena p{
+  margin:auto;
+}
+.resena img{
+  margin: auto;
+  opacity: 0.5
+}
+.resena p{
+  text-align: center;
+
+}
+.resena a:hover{
+  color:rgb(255,163,19);
+}
+.resena span{
+  color: rgb(255,163,19);
+}
+.resena small{
+  opacity: 0.7;
+}
+.calificacion{
+  top:0;
+  left:39%;
+  position:relative;
+}
+/*RESEÑAS*/

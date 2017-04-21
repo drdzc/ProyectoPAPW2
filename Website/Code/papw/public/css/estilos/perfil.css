@@ -1,0 +1,39 @@
+.InfoPerfil{
+  background-color: rgba(78, 168, 33, 0.4);
+  border-radius: 5px;
+
+}
+.InfoPerfil img{
+  height: 100px;
+  width: 100px;
+  margin:auto;
+  float: none;
+}
+
+.crearContenido input{
+  visibility: hidden;
+}
+.crearContenido img{
+
+  margin: auto;
+}
+
+#exTab1 .tab-content {
+  color : white;
+  background-color:rgba(78, 168, 33, 0.4);
+  padding : 5px 15px;
+}
+#exTab1 ul li{
+  background-color: rgba(78, 168, 33, 0.2);
+  padding: 0;
+  text-align: center;
+}
+#exTab1 ul li.active, #exTab1 ul li.active a {
+  margin: 0;
+  background-color: rgba(78, 168, 33, 0.7);
+  border-radius: 4px 4px 0 0;
+}
+#exTab1 ul li a img{
+  width: 100px;
+  margin: auto;
+}

@@ -16,5 +16,8 @@ Route::get('/', function () {
 })->name('principal');
 
 Route::get('/juego','juegoController@verJuego');
+Route::get('/juegos','juegoController@verJuegos');
 Route::get('/noticia','aplicacionController@verNoticia');
 Route::get('/review','aplicacionController@verReview');
+Route::get('/perfil','aplicacionController@verPerfil');
+Route::get('/principal', 'aplicacionController@paginaPrincipal');
