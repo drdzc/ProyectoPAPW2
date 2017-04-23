@@ -14,9 +14,14 @@
           <span>Género(s): </span> <a href="#">Aventura</a>,<a href="#">Acción</a>
         </p>
         <p><span>Fecha de lanzamiento:</span> 03 de Marzo del 2017</p>
+        <a href="#" class="btn btn-primary liga">Escribir reseña</a>
       </div>
-      <div class="calificacion col-md-5">
-        <h2 class="col-sm-6">Calificación Polygaming</h2>
+      <div class="calificacion col-md-5 ">
+        <div class="col-sm-6 text-center">
+          <h2 class=col-xs-12>Calificación Polygaming</h2>
+          <canvas clas=col-xs-12 id="canvas" ></canvas>
+        </div>
+
         <h2 class="col-sm-6">Calificación de usuarios</h2>
       </div>
     </div>
@@ -88,4 +93,7 @@
   </div>
   <!--RELACIONADOS-->
 </div>
+
+
+</script>
 @endsection

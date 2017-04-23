@@ -1,6 +1,8 @@
 .InfoPerfil{
-  background-color: rgba(78, 168, 33, 0.4);
+
   border-radius: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
 
 }
 .InfoPerfil img{
@@ -8,6 +10,15 @@
   width: 100px;
   margin:auto;
   float: none;
+}
+.c{
+
+    background-color: rgba(78, 168, 33, 0.4);
+    min-width:233px;
+    max-width: 300px;
+    margin:auto;
+    height: 300px;
+    border-radius: 5px;
 }
 
 .crearContenido input{

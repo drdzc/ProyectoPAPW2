@@ -5,15 +5,15 @@
 
 @section('contenido')
   <div class="container-fluid cont text-center">
-  <div class="titulo col-md-12">
+  <div class="row titulo col-md-12">
     <h1 class="titulo">POLYGAMING se vuelve la pagina mas visitada</h1>
     <h3 class="subtitulo">Estudio reciente dice que somos chidos</h3>
     <div class="creador col-xs-12 text-center">
-      <img src="{{asset("imagenes/logo.png")}}" alt="" class="img-responsive col-xs-3">
-      <p class="informacion col-xs-9"><span class="redactor">Por: </span> Daniel Rodriguez | <span class="fecha">12/12/12</span></p>
+      <a href="#" class="col-xs-5 col-sm-4 col-md-5"><img src="{{asset("imagenes/logo.png")}}" alt="" class="img-responsive "></a>
+      <p class="informacion col-xs-7 col-sm-8 col-md-7"><span class="redactor">Por: </span> Daniel Rodriguez | <span class="fecha">12/12/12</span></p>
     </div>
   </div>
-  <div class="col-md-12">
+  <div class="row col-md-12">
     <img src="{{asset("imagenes/videojuegos.jpg")}}" alt="" class="imagenNoticia img-responsive">
   </div>
   <div class="col-md-12">
@@ -23,7 +23,12 @@
   </div>
 
   <!--OTRAS NOTCIAS-->
-    <h2>Otras Noticias</h2>
+  <div class="col-xs-12">
+    <hr class="col-sm-4 separador ">
+    <h2 class="col-sm-4 col-xs-12 text-center">Otras Noticias</h2>
+    <hr class="col-sm-4 separador ">
+    <hr class="col-xs-12 hidden-sm hidden-md hidden-lg separador ">
+  </div>
     <div class="relacionados row text-center">
       <div class="relacionado col-sm-3">
         <a href="#"><img src="{{asset("imagenes/videojuegos2.jpg")}}" alt="" class="img-responsive"></a>
@@ -38,7 +43,7 @@
 
   <!--COMENTARIOS-->
   <div class="contenedor col-md-12">
-    <div class="col-md-12 seccionComentarios text-left">
+    <div class=" row col-md-12 seccionComentarios text-left">
       <div class="">
         <h2>Comentarios</h2>
       </div>

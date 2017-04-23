@@ -54,7 +54,7 @@ ul.categorias li{
 .categorias{
 }
 li a:hover{
-  color: red;
+
 }
 
 .perfilUL li a{
@@ -67,3 +67,16 @@ li a:hover{
 }
 
 /*NAVBAR*/
+
+.separador{
+  border: 0;
+  border-top: 1px solid orange;
+  display: inline;
+  vertical-align: middle;
+  margin-top: 40px;
+  padding: 0;
+}
+canvas{
+  width: 100%;
+  height: auto;
+}

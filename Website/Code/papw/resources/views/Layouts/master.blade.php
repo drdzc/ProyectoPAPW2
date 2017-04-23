@@ -23,19 +23,19 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a href="#" class="navbar-brand"><img src="../imagenes/logo.png" alt=""></a>
+          <a href="{{url('/principal')}}" class="navbar-brand"><img src="../imagenes/logo.png" alt=""></a>
         </div>
 
         <div class="collapse navbar-collapse  " id="navbar-1">
           <ul class="nav navbar-nav categorias">
-            <li class=""><a href="" class="texto">Noticias</a></li>
+            <li class=""><a href="#" class="texto">Noticias</a></li>
             <li><a href="" class="texto">Reseñas</a></li>
-            <li><a href="" class="texto">Juegos</a></li>
+            <li><a href="{{url('/juegos')}}" class="texto">Juegos</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right perfilUL ">
             <li class="a">
-                <a href="" class=""><img src="../imagenes/logo.png" alt="" class="img-circle perfil"></a>
+                <a href="{{url('/perfil')}}" class=""><img src="../imagenes/logo.png" alt="" class="img-circle perfil"></a>
             </li>
             <!--
             <li class="dropdown perfil">
@@ -75,7 +75,11 @@
   <!--CONTENIDO-->
 
   <!--SCRIPTS-->
-  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="{{asset("js/jquery.js")}}"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{asset("js/jcanvas.js")}}">  </script>
+  <script type="text/javascript" src="{{asset("js/calificacion.js")}}"></script>
+
+
 </body>
 </html>

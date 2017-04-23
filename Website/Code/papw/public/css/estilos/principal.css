@@ -72,7 +72,7 @@
   padding-top: 20px;
 }
 .slide{
-  background-color: rgba(5, 52, 58,0.5);
+
 }
 .tituloSlide{
   color: #e9e9e9;
@@ -137,3 +137,42 @@
   position:relative;
 }
 /*RESEÑAS*/
+
+/*CREAR CONTENIDO*/
+.crearContenido img{
+  margin:auto;
+  max-width: 70px;
+}
+.cNoticia{
+  padding-right: 0;
+  text-align: right;
+  padding-right: 10px;
+
+}
+.cNoticia img{
+  margin-right: 5%;
+}
+.cReseña{
+  padding-left: 0;
+  text-align: left;
+  padding-left: 10px;
+}
+.cReseña img{
+  margin-left: 5%;
+}
+/*CREAR CONTENIDO*/
+
+/*FOOTER*/
+.footer{
+  background-color: rgb(5,52,58);
+  margin-top: 40px;
+}
+.footer p{
+  color:#e9e9e9;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.noticiab button{
+  margin-left:90%;
+}
+/*FOOTER*/

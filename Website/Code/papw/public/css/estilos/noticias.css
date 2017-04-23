@@ -22,7 +22,13 @@
   width: 50px;
   padding: 0;
   margin: auto;
-
+  margin-right: 0;
+}
+.creador p{
+  text-align: left;
+}
+.creador a{
+  padding-right: 0;
 }
 /*ENCABEZADO*/
 
