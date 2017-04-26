@@ -15,6 +15,12 @@ nav{
   margin-top:  0px;
 }
 
+.combos{
+  display: inline;
+  width: 30%;
+  padding-right: 0px !important;
+  margin-right: 2%;
+}
 .form-control {
   padding-right: 30px;
 }
@@ -40,7 +46,7 @@ nav{
 .formulario2{
   background-color: rgba(78, 168, 33, 0.4);
   max-width: 300px;
-  height :570px;
+  height :580px;
   padding :0;
   padding-bottom: 50px;
   border-radius: 5px;
@@ -84,6 +90,7 @@ nav{
 }
 
 .entrar{
+  margin-top: 10px;
     background-color: rgb(255,163,19);
     color : #e2e9e7;
 }

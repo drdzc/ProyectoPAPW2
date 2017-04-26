@@ -4,22 +4,23 @@
 @section('titulo','Noticia')
 
 @section('contenido')
+    @if($datos)
   <div class="container-fluid cont text-center">
+
   <div class="row titulo col-md-12">
-    <h1 class="titulo">POLYGAMING se vuelve la pagina mas visitada</h1>
-    <h3 class="subtitulo">Estudio reciente dice que somos chidos</h3>
+    <h1 class="titulo">{{$datos[0]->titulo}}</h1>
+    <h3 class="subtitulo">{{$datos[0]->subtitulo}}</h3>
     <div class="creador col-xs-12 text-center">
-      <a href="#" class="col-xs-5 col-sm-4 col-md-5"><img src="{{asset("imagenes/logo.png")}}" alt="" class="img-responsive "></a>
-      <p class="informacion col-xs-7 col-sm-8 col-md-7"><span class="redactor">Por: </span> Daniel Rodriguez | <span class="fecha">12/12/12</span></p>
+      <a href="/perfil/{{$datos[0]->idUsuario}}" class="col-xs-5 col-sm-4 col-md-5"><img src="{{asset("imagenes/logo.png")}}" alt="" class="img-responsive "></a>
+      <p class="informacion col-xs-7 col-sm-8 col-md-7"><span class="redactor">Por: </span> {{$datos[0]->nombre}} | <span class="fecha">{{$datos[0]->created_at}}</span></p>
     </div>
   </div>
   <div class="row col-md-12">
-    <img src="{{asset("imagenes/videojuegos.jpg")}}" alt="" class="imagenNoticia img-responsive">
+    <img src="{{asset($datos[0]->urlBanner)}}" alt="" class="imagenNoticia img-responsive">
   </div>
   <div class="col-md-12">
-    <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="texto">{{$datos[0]->contenido}}</p>
+
   </div>
 
   <!--OTRAS NOTCIAS-->
@@ -81,4 +82,5 @@
 
   <!--COMENTARIOS-->
 </div>
+@endif
 @endsection

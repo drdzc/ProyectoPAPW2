@@ -4,14 +4,20 @@
 @section('titulo','Perfil')
 
 @section('contenido')
+
 <div class="contenido container-fluid">
   <!--BARRA IZQUIERDA-->
   <div class="InfoPerfil col-md-4 col-xs-12 text-center">
     <div class="c">
-      <img src="{{asset("imagenes/videojuegos.jpg")}}" alt="" class=" img-thumbnail  "/>
+      @if(Auth::user()->urlFoto==null)
+        <img src="{{asset("imagenes/nopic.png")}}" alt="" class=" img-thumbnail  "/>
+      @else
+        <img src="{{asset(Auth::user()->urlFoto)}}" alt="" class=" img-thumbnail  "/>
+      @endif
 
     <div>
-      <h4 class="nombre">Gerardo Daniel Rodriguez Cardona</h4>
+      <h4 class="nombre">{{Auth::user()->nombre}}</h4>
+      <h4 class="nombre">Es miembro desde {{Auth::user()->created_at}}</h4>
     </div>
     </div>
   </div>

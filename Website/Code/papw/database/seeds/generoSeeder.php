@@ -13,17 +13,17 @@ class generoSeeder extends Seeder
     {
         //
         DB::table('genero')->insert(
-          ['nombreGenero' => 'Acción'],
-          ['nombreGenero' => 'Aventura'],
-          ['nombreGenero' => 'Carreras'],
-          ['nombreGenero' => 'Deportes'],
-          ['nombreGenero' => 'Estrategia'],
-          ['nombreGenero' => 'Mundo Abierto'],
-          ['nombreGenero' => 'Musical'],
-          ['nombreGenero' => 'Rol'],
-          ['nombreGenero' => 'Simulación'],
-          ['nombreGenero' => 'Shooter'],
-          ['nombreGenero' => 'Survival'],
+          ['nombreGenero' => 'Acción',],
+          ['nombreGenero' => 'Aventura',],
+          ['nombreGenero' => 'Carreras',],
+          ['nombreGenero' => 'Deportes',],
+          ['nombreGenero' => 'Estrategia',],
+          ['nombreGenero' => 'Mundo Abierto',],
+          ['nombreGenero' => 'Musical',],
+          ['nombreGenero' => 'Rol',],
+          ['nombreGenero' => 'Simulación',],
+          ['nombreGenero' => 'Shooter',],
+          ['nombreGenero' => 'Survival',]
         );
     }
 }

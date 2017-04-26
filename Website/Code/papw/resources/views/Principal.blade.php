@@ -8,11 +8,11 @@
     <div class="crearContenido row">
       <div class="col-xs-6 cNoticia">
         <img src="{{asset("imagenes/noticia.png")}}" alt="" class="img-responsive">
-        <a href="#">Escribe una noticia</a>
+        <a href="/noticias/crear">Escribe una noticia</a>
       </div>
       <div class="col-xs-6 cReseña ">
         <img src="{{asset("imagenes/noticia.png")}}" alt="" class="img-responsive">
-        <a href="#">Escribe una reseña</a>
+        <a href="/review/crear">Escribe una reseña</a>
       </div>
     </div>
         <!--CARRUSEL-->

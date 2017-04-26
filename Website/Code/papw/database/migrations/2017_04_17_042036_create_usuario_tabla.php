@@ -17,10 +17,11 @@ class CreateUsuarioTabla extends Migration
             $table->increments('idUsuario');
             $table->string('nombre',50);
             $table->string('correo')->unique();
-            $table->string('contrasena',50);
+            $table->text('contrasena');
             $table->date('fechaNacimiento');
             $table->boolean('genero');
-            $table->text("urlFoto");
+            $table->text("urlFoto")->nullable();
+            $table->boolean("tipo");
             $table->rememberToken();
             $table->timestamps();
         });

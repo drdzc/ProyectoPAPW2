@@ -51,7 +51,7 @@
             </ul>
           </li>-->
           <li>
-            <a href="" class="texto">Salir</a>
+            <a href="{{route("logout")}}" class="texto">Salir</a>
           </li>
           </ul>
           <form action="" class="navbar-form navbar-right" role="search">
@@ -79,7 +79,7 @@
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="{{asset("js/jcanvas.js")}}">  </script>
   <script type="text/javascript" src="{{asset("js/calificacion.js")}}"></script>
-
+  <script type="text/javascript" src=@yield('script')></script>
 
 </body>
 </html>

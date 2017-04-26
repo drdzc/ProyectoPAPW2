@@ -12,7 +12,7 @@
       <nav class="navbar navbar-fixed-top">
           <img src="../imagenes/logo.png" alt="" class="navbar-left ">
 
-            <a href="login.html" class="btn btn-accion pull-right navbar-btn">Entrar</a>
+            <a href="{{route("login")}}" class="btn btn-accion pull-right navbar-btn">Entrar</a>
 
 
       </nav>
@@ -29,7 +29,7 @@
 							<h2 class="col-xs-12 text-center h3headline">El mejor sitio de información de videojuegos del <span class="colorspan">multiverso</span>.</h2>
 
 						<div class="botonunir text-center center-block col-xs-12">
-							<a href="registro.html" class="btn  btn-unirse center-block ">ÚNETE AHORA   <span class="glyphicon glyphicon-triangle-right"></span></a>
+							<a href="{{route("registro")}}" class="btn  btn-unirse center-block ">ÚNETE AHORA   <span class="glyphicon glyphicon-triangle-right"></span></a>
 						</div>
 					</div>
 				</div>
@@ -126,7 +126,7 @@
 						<img src="../Imagenes/unete2.png" alt="" class="col-xs-12  col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
 
 						<div class="unetebtn col-xs-12 center-block text-center">
-							<a href="registro.html" class="btn btnzelda ">UNIRME <span class="glyphicon glyphicon-triangle-right"></span></a>
+							<a href="{{route("registro")}}" class="btn btnzelda ">UNIRME <span class="glyphicon glyphicon-triangle-right"></span></a>
 						</div>
 
 

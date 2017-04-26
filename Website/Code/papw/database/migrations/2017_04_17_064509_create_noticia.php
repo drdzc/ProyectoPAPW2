@@ -18,11 +18,11 @@ class CreateNoticia extends Migration
             $table->string('titulo',50);
             $table->string('subtitulo',50)->nullable();
             $table->text('contenido');
-            $table->timestamp('fechaHora');
             $table->boolean('validada');
             $table->boolean('activa');
+            $table->text("urlBanner");
             $table->integer('idUsuario')->unsigned();
-            $table->foreign('idUsuario')->references('idUsuario')->on('usuario')->onDelete('cascade');;
+            $table->foreign('idUsuario')->references('idUsuario')->on('usuario')->onDelete('cascade');
             $table->timestamps();
         });
     }
