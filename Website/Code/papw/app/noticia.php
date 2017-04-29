@@ -9,4 +9,5 @@ class noticia extends Model
     //
         protected $table = 'noticia';
         protected $primaryKey = 'idNoticia';
+        
 }

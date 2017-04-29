@@ -48,7 +48,7 @@ class noticiaController extends Controller
         $id=$noticia->idNoticia;
         $titulo=$noticia->titulo;
         $id = Crypt::encrypt($id);
-        return redirect("/noticia/".$titulo."/".$id);
+        return redirect("noticia/".$titulo."/".$id);
       }
       else{
         return($noticia->idUsuario);

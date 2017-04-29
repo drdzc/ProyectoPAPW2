@@ -6,7 +6,8 @@
  */
 
 require('./bootstrap');
-
+var Vue = require('vue');
+Vue.use(require('vue-resource'));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -14,6 +15,11 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('noticia', require('./components/perfil.vue'));
+Vue.component('reviews', require('./components/perfilReviews.vue'));
+Vue.component('todonoticias', require('./components/principalNoticias.vue'));
+Vue.component('todoreviews', require('./components/principalReviews.vue'));
+Vue.component('todojuegos', require('./components/principalJuegos.vue'));
 
 const app = new Vue({
     el: '#app'

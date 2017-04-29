@@ -1,6 +1,7 @@
 @extends('layouts.master')
-
-@section('estilo','../css/estilos/noticias.css')
+@section('estilos')
+  <link rel="stylesheet" type="text/css" href="{{asset('css/estilos/noticias.css')}}" />
+@endsection
 @section('titulo','Noticia')
 
 @section('contenido')

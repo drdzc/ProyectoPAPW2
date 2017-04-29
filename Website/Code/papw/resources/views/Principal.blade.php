@@ -4,7 +4,7 @@
 @section('titulo','Polygaming')
 
 @section('contenido')
-  <div class="container text-center contenido">
+  <div class="container text-center contenido" id="app">
     <div class="crearContenido row">
       <div class="col-xs-6 cNoticia">
         <img src="{{asset("imagenes/noticia.png")}}" alt="" class="img-responsive">
@@ -56,7 +56,7 @@
         <br />
 
         <!--NUEVO-->
-        <div class="col-sm-12 nuevoUsuarios">
+        <div class="row col-sm-12 nuevoUsuarios">
           <div class="col-sm-4 col-xs-12">
             <img src="{{asset("imagenes/videojuegos.jpg")}}" alt="" class="img-responsive">
             <p class="tipo">Noticia</p>
@@ -180,32 +180,13 @@
 
         <!--NOTICIAS-->
         <div class="row noticias">
+
           <div class="col-xs-12">
             <h2 class="col-md-3 col-xs-12 text-left">Noticias</h2>
             <hr class="col-md-6 col-xs-12 separador ">
           </div>
           <div class="row text-center">
-            <div class="col-sm-4 col-xs-12 noticia">
-              <img src="{{asset("imagenes/videojuegos2.jpg")}}" alt="" class="img-responsive">
-              <h3 class="">Titulo</h3>
-              <small><span>Por: </span>Gerardo Rodriguez</small>
-              <p>Información adicional acerca de la noticia para atraer la atencion del usuario al usuario...</p>
-              <a href="#">Seguir leyendo</a>
-            </div>
-            <div class="col-sm-4 col-xs-12 noticia">
-              <img src="{{asset("imagenes/videojuegos2.jpg")}}" alt="" class="img-responsive">
-              <h3 class="">Titulo</h3>
-              <small><span>Por: </span>Byron Guevara</small>
-              <p>Información adicional acerca de la noticia para atraer la atencion del usuario al usuario...</p>
-              <a href="#">Seguir leyendo</a>
-            </div>
-            <div class="col-sm-4 col-xs-12 noticia">
-              <img src="{{asset("imagenes/videojuegos2.jpg")}}" alt="" class="img-responsive">
-              <h3 class="">Titulo</h3>
-              <small><span>Por: </span>Fernando Reyes</small>
-              <p>Información adicional acerca de la noticia para atraer la atencion del usuario al usuario...</p>
-              <a href="#">Seguir leyendo</a>
-            </div>
+            <todoNoticias></todoNoticias>
           </div>
           <div class="row text-center">
             <div class="col-sm-4 col-xs-12 noticia">
@@ -338,4 +319,8 @@
 
       </div>
     </div>
+@endsection
+@section('scripts')
+  <script type="text/javascript" src="js/app.js">    </script>
+
 @endsection

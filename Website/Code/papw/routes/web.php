@@ -37,7 +37,7 @@ Route::post('/noticia/guardar','noticiaController@guardar');
 /*NOTICIA*/
 
 //REV
-Route::get('/review/{titulo}/{id}','reviewController@verReview');
+Route::get('review/{titulo}/{id}','reviewController@verReview');
 Route::get('/review/crear','reviewController@crearReview');
 Route::post('/review/guardar','reviewController@guardar');
 //REV

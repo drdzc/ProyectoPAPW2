@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\usuario;
 use Illuminate\Http\Request;
@@ -40,5 +41,23 @@ class usuarioController extends Controller
     public function logout(){
       Auth::logout();
       return redirect()->route("index");
+    }
+
+    public function verNoticias(){
+      $id=Auth::user();
+
+      $datos = DB::table('noticia')->where('idUsuario','=', '1' )->select("titulo", "urlBanner", "idNoticia", "subtitulo")->get();
+      //$datos=JSON.parse($datos);
+      //return $datos;
+      return response()->json($datos);
+    }
+
+    public function verReviews(){
+      $id=Auth::user();
+
+      $datos = DB::table('usuario_resena_juego')->where('idUsuario','=', '1' )->select("titulo", "urlImagen", "idResena", "frase")->get();
+      //$datos=JSON.parse($datos);
+      //return $datos;
+      return response()->json($datos);
     }
 }

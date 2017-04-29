@@ -9,6 +9,7 @@
   <!--BARRA IZQUIERDA-->
   <div class="InfoPerfil col-md-4 col-xs-12 text-center">
     <div class="c">
+
       @if(Auth::user()->urlFoto==null)
         <img src="{{asset("imagenes/nopic.png")}}" alt="" class=" img-thumbnail  "/>
       @else
@@ -44,57 +45,16 @@
     			</li>
   		</ul>
 
-			<div class="tab-content clearfix ">
+			<div class="tab-content clearfix " id="app">
+
 			  <div class="tab-pane active panelNoticias" id="1a">
-
-          <div class="noticia row">
-            <div class="col-xs-12">
-              <img src="{{asset("imagenes/videojuegos.jpg")}}" alt="" class="col-xs-12 col-md-3">
-              <div class="info  text-center col-md-9 col-xs-12">
-                <h2 class="col-xs-10">TItulo de la noticia</h2>
-                <a href="#" class=col-xs-1><span class="glyphicon glyphicon-pencil"></span></a>
-                <a href="#" class=col-xs-1><span class="glyphicon glyphicon-remove"></span></a>
-                <p class="col-xs-12 text-left">Aqui va el texto inicial de la noticia</p>
-              </div>
-            </div>
-          </div>
-          <div class="noticia row">
-            <div class="col-xs-12">
-              <img src="{{asset("imagenes/videojuegos2.jpg")}}" alt="" class="col-xs-12 col-md-3">
-              <div class="info  text-center col-md-9 col-xs-12">
-                <h2 class="col-xs-10">TItulo de la noticia</h2>
-                <a href="#" class=col-xs-1><span class="glyphicon glyphicon-pencil"></span></a>
-                <a href="#" class=col-xs-1><span class="glyphicon glyphicon-remove"></span></a>
-                <p class="col-xs-12 text-left">Aqui va el texto inicial de la noticia</p>
-              </div>
-            </div>
-          </div>
-          <div class="noticia row">
-            <div class="col-xs-12">
-              <img src="{{asset("imagenes/videojuegos3.jpg")}}" alt="" class="col-xs-12 col-md-3">
-              <div class="info  text-center col-md-9 col-xs-12">
-                <h2 class="col-xs-10">TItulo de la noticia</h2>
-                <a href="#" class=col-xs-1><span class="glyphicon glyphicon-pencil"></span></a>
-                <a href="#" class=col-xs-1><span class="glyphicon glyphicon-remove"></span></a>
-                <p class="col-xs-12 text-left">Aqui va el texto inicial de la noticia</p>
-              </div>
-            </div>
-          </div>
-
+          <noticia></noticia>
 				</div>
+
 				<div class="tab-pane panelResenas" id="2a">
-          <div class="resena row">
-            <div class="col-xs-12">
-              <img src="{{asset("imagenes/zelda.png")}}" alt="" class="col-xs-12 col-md-3">
-              <div class="info  text-center col-md-9 col-xs-12">
-                <h2 class="col-xs-10">TItulo de la Reseña</h2>
-                <a href="#" class=col-xs-1><span class="glyphicon glyphicon-pencil"></span></a>
-                <a href="#" class=col-xs-1><span class="glyphicon glyphicon-remove"></span></a>
-                <p class="col-xs-12 text-center">100</p>
-              </div>
-            </div>
-          </div>
+            <reviews></reviews>
 				</div>
+
 			</div>
 
   </div>
@@ -108,4 +68,9 @@
   <!--CENTRO-->
 
 </div>
+@endsection
+
+@section('scripts')
+  <script type="text/javascript" src="js/app.js">    </script>
+
 @endsection

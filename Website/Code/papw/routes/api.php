@@ -16,3 +16,20 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+//API-VUE
+/*USUARIO*/
+Route::get('/noticias', [
+  'uses' => 'usuarioController@verNoticias'
+]);
+Route::get('/reviews', [
+  'uses' => 'usuarioController@verReviews'
+]);
+/*USUARIO*/
+
+/*PRINCIPAL*/
+Route::get('/todoNoticias', [
+  'uses' => 'aplicacionController@traerNoticias'
+]);
+/*PRINCIPAL*/

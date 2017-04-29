@@ -70,6 +70,6 @@ class reviewController extends Controller
       $id=$rev->idResena;
       $titulo=$rev->titulo;
       $id = Crypt::encrypt($id);
-      return redirect("/review/".$titulo."/".$id);
+      return redirect("review/".$titulo."/".$id);
     }
 }
