@@ -222,28 +222,7 @@
             <hr class="col-md-6 col-xs-12 separador ">
           </div>
           <div class="row text-center ">
-            <div class="col-sm-4 col-xs-12 resena">
-              <img src="{{asset("imagenes/videojuegos3.jpg")}}" alt="" class="img-responsive">
-              <p class="calificacionR">100</p>
-              <h3>Titulo</h3>
-              <small><span>Por: </span>Gerardo Rodriguez</small>
-              <p>Aqui va una frase que resuma la reseña</p>
-              <a href="#">Leer completa</a>
-            </div>
-            <div class="col-sm-4 col-xs-12 resena">
-              <img src="{{asset("imagenes/videojuegos3.jpg")}}" alt="" class="img-responsive">
-              <h3>Titulo</h3>
-              <small><span>Por: </span>Gerardo Rodriguez</small>
-              <p>Aqui va una frase que resuma la reseña</p>
-              <a href="#">Leer completa</a>
-            </div>
-            <div class="col-sm-4 col-xs-12 resena">
-              <img src="{{asset("imagenes/videojuegos3.jpg")}}" alt="" class="img-responsive">
-              <h3>Titulo</h3>
-              <small><span>Por: </span>Gerardo Rodriguez</small>
-              <p>Aqui va una frase que resuma la reseña</p>
-              <a href="#">Leer completa</a>
-            </div>
+            <todoreviews></todoreviews>
           </div>
           <div class="row text-center">
             <div class="col-sm-4 col-xs-12 resena">
@@ -279,6 +258,7 @@
             <hr class="col-md-6 col-xs-12 separador ">
           </div>
           <div class="ultimosLanzamientos col-xs-12">
+            <todojuegos></todojuegos>
             <div class="juegoLanzado col-xs-6 col-md-3">
               <img src="{{asset("imagenes/zelda.png")}}" alt="" class="img-responsive">
               <h3>Titulo</h3>
@@ -322,5 +302,6 @@
 @endsection
 @section('scripts')
   <script type="text/javascript" src="js/app.js">    </script>
+  <script type="text/javascript" src="js/principal.js">    </script>
 
 @endsection

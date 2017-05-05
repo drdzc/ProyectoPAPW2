@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="">
-    <div class="col-sm-4 col-xs-12 resena" v-for="review in reviews" :contenido="review ">
-      <img src="{{asset("imagenes/videojuegos3.jpg")}}" alt="" class="img-responsive">
-      <h3>Titulo</h3>
-      <small><span>Por: </span>Gerardo Rodriguez</small>
+    <div class="col-sm-4 col-xs-12 resena" v-for="review in reviews" :contenido="review">
+      <img :src=review.urlImagen alt="" class="img-responsive">
+      <h3>{{review.titulo}}</h3>
+      <small><span>Por: </span>{{review.usuarios[0].nombre}}</small>
       <p>Aqui va una frase que resuma la reseña</p>
-      <a href="#">Leer completa</a>
+      <a :href="'review/'+review.titulo+'/'+review.idResena">Leer completa</a>
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@
     //funciones que van a traer los datos
     methods: {
       traerReviews : function(){
-          this.$http.get("../api/todoNoticias").then(function (response){
+          this.$http.get("../api/todoResenas").then(function (response){
             this.reviews = response.data.data;
                console.log(response.data.data);
 

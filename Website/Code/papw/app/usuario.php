@@ -13,4 +13,12 @@ class usuario extends Authenticatable
     ];
 
     protected $primaryKey = 'idUsuario';
+
+    public function juegosResenados(){
+      return $this->belongsToMany('App\juego','usuario_resena_juego','idUsuario', 'idJuego')
+      ->withPivot('titulo','contenido1','contenido2','veredicto','frase','urlImagen', 'urlImagen2','calificacion')
+      ->withTimestamps();
+    }
+
+    
 }

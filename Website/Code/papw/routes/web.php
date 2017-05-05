@@ -27,6 +27,10 @@ Route::post("/loguear",'usuarioController@loguearUsuario');
 Route::get("/logout",'usuarioController@logout')->name("logout");
 //USUARIO
 
+//Principal
+Route::get("/carruselRelevantes", 'aplicacionController@carruselRelevantes');
+//Principal
+
 Route::get('/juego','juegoController@verJuego');
 Route::get('/juegos','juegoController@verJuegos');
 

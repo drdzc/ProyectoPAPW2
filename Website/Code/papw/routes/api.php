@@ -32,4 +32,10 @@ Route::get('/reviews', [
 Route::get('/todoNoticias', [
   'uses' => 'aplicacionController@traerNoticias'
 ]);
+Route::get('/todoResenas', [
+  'uses' => 'aplicacionController@traerResenas'
+]);
+Route::get('/todoJuegos', [
+  'uses' => 'aplicacionController@traerJuegos'
+]);
 /*PRINCIPAL*/
