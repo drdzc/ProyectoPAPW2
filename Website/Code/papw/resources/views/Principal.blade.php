@@ -27,25 +27,31 @@
             <div class="carousel-inner" role="listbox ">
 
               <div class="item active">
-                <img src="{{asset("imagenes/videojuegos.jpg")}}" alt="" class=" imgCarrusel">
-                <div class="carousel-caption">
-                  <h3>Los videojuegos en la historia</h3>
-                  <p class="tipo">NOTICIA</p>
-                </div>
+                @if (!empty($noticiasR[0]))
+                  <img src="{{asset($noticiasR[0]->urlBanner)}}" alt="" class=" imgCarrusel">
+                  <div class="carousel-caption">
+                    <h3>{{$noticiasR[0]->titulo}}</h3>
+                    <p class="tipo">NOTICIA</p>
+                  </div>
+                @endif
               </div>
               <div class="item">
-                <img src="{{asset("imagenes/videojuegos2.jpg")}}" alt="" class="imgCarrusel">
-                <div class="carousel-caption">
-                  <h3>pac man cumple 117 años</h3>
-                  <p class="tipo">NOTICIA</p>
-                </div>
+                @if (!empty($noticiasR[1]))
+                  <img src="{{asset($noticiasR[1]->urlBanner)}}" alt="" class=" imgCarrusel">
+                  <div class="carousel-caption">
+                    <h3>{{$noticiasR[1]->titulo}}</h3>
+                    <p class="tipo">NOTICIA</p>
+                  </div>
+                @endif
               </div>
               <div class="item">
-                <img src="{{asset("imagenes/videojuegos3.jpg")}}" alt="" class=" imgCarrusel">
-                <div class="carousel-caption">
-                  <h3>Nintendo Switch tendrá nuevos juegos de Mario</h3>
-                  <p class="tipo">NOTICIA</p>
-                </div>
+                @if (!empty($noticiasR[2]))
+                  <img src="{{asset($noticiasR[2]->urlBanner)}}" alt="" class=" imgCarrusel">
+                  <div class="carousel-caption">
+                    <h3>{{$noticiasR[2]->titulo}}</h3>
+                    <p class="tipo">NOTICIA</p>
+                  </div>
+                @endif
               </div>
             </div>
           </div>
@@ -57,21 +63,13 @@
 
         <!--NUEVO-->
         <div class="row col-sm-12 nuevoUsuarios">
-          <div class="col-sm-4 col-xs-12">
-            <img src="{{asset("imagenes/videojuegos.jpg")}}" alt="" class="img-responsive">
-            <p class="tipo">Noticia</p>
-            <h3 class=titulo>Esto es una noticia</h3>
-          </div>
-          <div class="col-sm-4 col-xs-12">
-            <img src="{{asset("imagenes/videojuegos.jpg")}}" alt="" class="img-responsive">
-            <p class="tipo">Noticia</p>
-            <h3 class=titulo>Esto es otra noticia</h3>
-          </div>
-          <div class="col-sm-4 col-xs-12">
-            <img src="{{asset("imagenes/videojuegos.jpg")}}" alt="" class="img-responsive">
-            <p class="tipo">Review</p>
-            <h3 class=titulo>Esto es una review</h3>
-          </div>
+          @foreach ($reviewsR as $rev)
+            <div class="col-sm-4 col-xs-12">
+              <img src="{{asset($rev->urlBanner)}}" alt="" class="img-responsive">
+              <p class="tipo">Reseña</p>
+              <h3 class=titulo>{{$rev->titulo}}</h3>
+            </div>
+          @endforeach
         </div>
         <!--NUEVO-->
 
@@ -186,9 +184,18 @@
             <hr class="col-md-6 col-xs-12 separador ">
           </div>
           <div class="row text-center">
-            <todoNoticias></todoNoticias>
+            @foreach ($noticias as $noticia)
+              <div class="col-sm-4 col-xs-12 noticia">
+                <img src={{$noticia->urlBanner}} alt="" class="col-xs-12 imgNoticia">
+                <h3 class="col-xs-12">{{$noticia->titulo}}</h3>
+                <small class="col-xs-12"><span>Por: </span>{{$noticia->admins[0]->nombre}}</small>
+                <p class="col-xs-12">{{$noticia->subtitulo}}</p>
+                <a href="noticia/{{$noticia->titulo}}/{{Crypt::encrypt($noticia->idNoticia)}}">Seguir leyendo</a>
+              </div>
+            @endforeach
+            <!--<todoNoticias></todoNoticias>-->
           </div>
-          <div class="row text-center">
+        <!--  <div class="row text-center">
             <div class="col-sm-4 col-xs-12 noticia">
               <img src="{{asset("imagenes/videojuegos2.jpg")}}" alt="" class="img-responsive">
               <h3 class="">Titulo</h3>
@@ -210,8 +217,8 @@
               <p>Información adicional acerca de la noticia para atraer la atencion del usuario al usuario...</p>
               <a href="#">Seguir leyendo</a>
             </div>
-          </div>
-          <a href="" class=verMasNoticias>Ver todas las noticias >></a>
+          </div>-->
+          <a href="{{url('/todasNoticias')}}" class=verMasNoticias>Ver todas las noticias >></a>
         </div>
         <!--NOTICIAS-->
 
@@ -222,9 +229,18 @@
             <hr class="col-md-6 col-xs-12 separador ">
           </div>
           <div class="row text-center ">
-            <todoreviews></todoreviews>
+            @foreach ($reviews as $review)
+              <div class="col-sm-4 col-xs-12 resena">
+                <img src={{$review->urlImagen}} alt="" class="img-responsive imgResena col-xs-12">
+                <h3 class="col-xs-12">{{$review->titulo}}</h3>
+                <small><span>Por: </span>{{$review->admins[0]->nombre}}</small>
+                <p>{{$review->frase}}</p>
+                <a href="review/{{$review->titulo}}/{{Crypt::encrypt($review->idResena)}}">Leer completa</a>
+              </div>
+            @endforeach
+          <!--  <todoreviews></todoreviews>-->
           </div>
-          <div class="row text-center">
+        <!--  <div class="row text-center">
             <div class="col-sm-4 col-xs-12 resena">
               <img src="{{asset("imagenes/videojuegos3.jpg")}}" alt="" class="img-responsive">
               <h3>Titulo</h3>
@@ -246,8 +262,8 @@
               <p>Aqui va una frase que resuma la reseña</p>
               <a href="#">Leer completa</a>
             </div>
-          </div>
-          <a href="">Ver todas las reseñas >></a>
+          </div>-->
+          <a href="{{url("/todasReviews")}}">Ver todas las reseñas >></a>
         </div>
         <!--RESEÑAS-->
 
@@ -258,29 +274,17 @@
             <hr class="col-md-6 col-xs-12 separador ">
           </div>
           <div class="ultimosLanzamientos col-xs-12">
-            <todojuegos></todojuegos>
-            <div class="juegoLanzado col-xs-6 col-md-3">
-              <img src="{{asset("imagenes/zelda.png")}}" alt="" class="img-responsive">
-              <h3>Titulo</h3>
-              <a href="#" class="btn btn-primary">Escribir Reseña</a>
-            </div>
-            <div class="juegoLanzado col-xs-6 col-md-3">
-              <img src="{{asset("imagenes/zelda.png")}}" alt="" class="img-responsive">
-              <h3>Titulo</h3>
-              <a href="#" class="btn btn-primary">Escribir Reseña</a>
-            </div>
-            <div class="juegoLanzado col-xs-6 col-md-3">
-              <img src="{{asset("imagenes/zelda.png")}}" alt="" class="img-responsive">
-              <h3>Titulo</h3>
-              <a href="#" class="btn btn-primary">Escribir Reseña</a>
-            </div>
-            <div class="juegoLanzado col-xs-6 col-md-3">
-              <img src="{{asset("imagenes/zelda.png")}}" alt="" class="img-responsive">
-              <h3>Titulo</h3>
-              <a href="#" class="btn btn-primary">Escribir Reseña</a>
-            </div>
+            @foreach ($lanzamientos as $juego)
+              <div class="juegoLanzado col-xs-6 col-md-3">
+                <img src={{$juego->urlPortada}} alt="" class="col-xs-12 imgJuego">
+                <h3 class="col-xs-12">{{$juego->titulo}}</h3>
+                <a href="review/crear/nueva/{{Crypt::encrypt($juego->idJuego)}}" class="btn btn-primary">Escribir Reseña</a>
+              </div>
+            @endforeach
+          <!--  <todojuegos></todojuegos>-->
+
           </div>
-          <a href="#" class="col-xs-12">Ver más juegos >></a>
+          <a href="/TJuegos" class="col-xs-12">Ver más juegos >></a>
         </div>
         <!--LANZAMIENTOS-->
 

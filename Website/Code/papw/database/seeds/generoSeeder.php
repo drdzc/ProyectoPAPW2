@@ -12,7 +12,7 @@ class generoSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('genero')->insert(
+        DB::table('genero')->insert([
           ['nombreGenero' => 'Acción',],
           ['nombreGenero' => 'Aventura',],
           ['nombreGenero' => 'Carreras',],
@@ -23,7 +23,8 @@ class generoSeeder extends Seeder
           ['nombreGenero' => 'Rol',],
           ['nombreGenero' => 'Simulación',],
           ['nombreGenero' => 'Shooter',],
-          ['nombreGenero' => 'Survival',]
-        );
+          ['nombreGenero' => 'Survival',],
+          ['nombreGenero' => 'Peleas',]
+        ]);
     }
 }

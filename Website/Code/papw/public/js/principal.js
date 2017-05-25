@@ -1,4 +1,4 @@
-$(document).ready(function (){
+/*$(document).ready(function (){
   $.ajax({
     url: "/carruselRelevantes",
     success: function(result){
@@ -9,4 +9,4 @@ $(document).ready(function (){
 
     }
   });
-});
+});*/

@@ -13,6 +13,6 @@ class comentNoticia extends Model
       return $this->hasMany('App\usuario','idUsuario','idUsuario');
     }
     public function noticias(){
-      return $this->belongsTo('App\juego','idNoticia','idNoticia ');
+      return $this->belongsTo('App\noticia','idNoticia','idNoticia ');
     }
 }

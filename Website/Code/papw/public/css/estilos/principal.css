@@ -108,6 +108,9 @@
   padding-top: 200px;
   margin-top: 200px;
 }
+.imgNoticia{
+  height: 170px;
+}
 /*NOTICIAS*/
 
 /*RESEÑAS*/
@@ -137,6 +140,14 @@
   position:relative;
 }
 /*RESEÑAS*/
+
+/*JUEGOS*/
+.imgJuego{
+  max-width: 223px;
+  max-height:300px;
+
+}
+/*JUEGOS*/
 
 /*CREAR CONTENIDO*/
 .crearContenido img{

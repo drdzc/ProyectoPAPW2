@@ -96,4 +96,11 @@
 small{
   opacity: 0.7;
 }
+
+#imgEditable:hover{
+  cursor: pointer;
+}
+#banner{
+  visibility: hidden;
+}
 /*COMENTARIOS*/

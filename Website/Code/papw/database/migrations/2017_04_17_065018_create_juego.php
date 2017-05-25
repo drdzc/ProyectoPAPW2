@@ -19,10 +19,11 @@ class CreateJuego extends Migration
             $table->text('descripcion');
             $table->text("urlPortada");
             $table->integer('idGenero')->unsigned();
-            $table->integer('idGenero2')->unsigned();
+            $table->integer('idGenero2')->unsigned()->nullable();
             $table->date('fechaLanzamiento');
             $table->integer('calificacionPagina')->nullable();
             $table->integer('calificacionUsuarios')->nullable();
+            $table->string('plataforma',20);
             $table->timestamps();
         });
     }

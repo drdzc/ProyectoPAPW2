@@ -22,9 +22,12 @@ class CrateResena extends Migration
             $table->text('contenido2');
             $table->text('veredicto');
             $table->string('frase',50);
+            $table->text('urlBanner');
             $table->text('urlImagen')->nullable();
             $table->text('urlImagen2')->nullable();
             $table->integer('calificacion');
+            $table->boolean('validada');
+            $table->boolean('activa');
             $table->foreign('idUsuario')->references('idUsuario')->on('usuario')->onDelete('cascade');
             $table->foreign('idJuego')->references('idJuego')->on('juego')->onDelete('cascade');
             $table->timestamps();

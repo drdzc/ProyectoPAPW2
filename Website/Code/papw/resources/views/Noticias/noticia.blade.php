@@ -32,14 +32,7 @@
     <hr class="col-xs-12 hidden-sm hidden-md hidden-lg separador ">
   </div>
     <div class="relacionados row text-center">
-      <div class="relacionado col-sm-3">
-        <a href="#"><img src="{{asset("imagenes/videojuegos2.jpg")}}" alt="" class="img-responsive"></a>
-        <p class="tituloSlide">Titulo</p>
-      </div>
-      <div class="relacionado col-sm-3">
-        <a href="#"><img src="{{asset("imagenes/videojuegos3.jpg")}}" alt="" class="img-responsive"></a>
-        <p class="tituloSlide">Titulo</p>
-      </div>
+
     </div>
   <!--OTRAS NOTCIAS-->
 
@@ -49,34 +42,24 @@
       <div class="">
         <h2>Comentarios</h2>
       </div>
-      <div class="comentar col-xs-12">
-        <img src="{{asset("imagenes/yo.jpg")}}" alt="" class="img-thumbnail hidden-xs col-md-2">
-        <div class="usuario col-xs-12 col-md-10">
-          <textarea name="name" rows="8" cols="80" placeholder="Deja tu comentario :)." class="form-control"></textarea>
+      <form class="" id="formComentar" method="post">
+        <input type="hidden" name="_token" id="token" value="{{csrf_token()}}">
+        <input type="hidden" name="id" id="idN" value="{{$datos[0]->idNoticia}}">
+        <div class="comentar col-xs-12">
+          <img src="{{asset(Auth::user()->urlFoto)}}" alt="" class="img-thumbnail hidden-xs col-md-2">
+          <div class="usuario col-xs-12 col-md-10">
+            <textarea name="name" id="textoComentario" rows="8" cols="80" placeholder="Deja tu comentario :)." class="form-control"></textarea>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 text-right">
-        <button type="button" name="button" class="btn boton">Comentar</button>
-      </div>
-      <div class="comentario col-xs-12">
-        <img src="{{asset("imagenes/yo.jpg")}}" alt="" class="img-thumbnail hidden-xs col-sm-1">
-        <div class="usuario col-xs-12 col-sm-11">
-          <a href="#">Gerardo Daniel Rodriguez Cardona</a>
-          <p>Esta muy padre la noticia, felicidades.</p>
-          <small><span class="glyphicon glyphicon-calendar"></span>21 de Marzo de 2017</small>
+        <div class="col-xs-12 text-right">
+          <button type="button" name="button" class="btn boton" id="comentar">Comentar</button>
         </div>
-          <hr class="col-xs-12">
+      </form>
+      <div class="comentarios col-xs-12">
+
       </div>
 
-      <div class="comentario col-xs-12">
-        <img src="{{asset("imagenes/yo.jpg")}}" alt="" class="img-thumbnail hidden-xs col-md-1">
-        <div class="usuario col-xs-12 col-md-11">
-          <a href="#">Gerardo Daniel Rodriguez Cardona</a>
-          <p>Esta muy padre la noticia, felicidades.</p>
-          <small><span class="glyphicon glyphicon-calendar"></span>21 de Marzo de 2017</small>
-        </div>
-          <hr class="col-xs-12">
-      </div>
+
 
     </div>
   </div>
@@ -84,4 +67,10 @@
   <!--COMENTARIOS-->
 </div>
 @endif
+@endsection
+
+@section('scripts')
+  <script type="text/javascript" src={{asset("js/NoticiaEspecifica.js")}}>
+
+  </script>
 @endsection

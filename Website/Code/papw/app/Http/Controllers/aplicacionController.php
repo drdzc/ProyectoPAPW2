@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Crypt;
 use App\usuario;
 use App\review;
+use App\noticia;
 use App\juego;
 use Illuminate\Http\Request;
 
@@ -18,8 +19,16 @@ class aplicacionController extends Controller
 
 
     public function paginaPrincipal(Request $req){
-    if(Auth::check())
-      return view('Principal');
+    if(Auth::check()){
+      $noticiasRelevantes = noticia::with("admins")->orderBy("idNoticia","desc")->limit(3)->get();
+      $revRelevantes = review::with("admins")->orderBy("idResena","desc")->limit(3)->get();
+      $noticias = noticia::with("usuariosC")->orderBy("idNoticia","desc")->limit(6)->get();
+      $reviews = review::with("usuariosC")->orderBy("idResena","desc")->limit(6)->get();
+      $lanzamientos = juego::orderBy("fechaLanzamiento","desc")->limit(4)->get();
+      return view('Principal',["noticiasR"=>$noticiasRelevantes, "reviewsR"=>$revRelevantes, "noticias" => $noticias, "reviews" => $reviews,
+                    "lanzamientos" => $lanzamientos]);
+    }
+
       else {
         return redirect()->route("login")->with('mensaje_error','Debes haber iniciado sesion');
       }
@@ -27,7 +36,11 @@ class aplicacionController extends Controller
     }
     public function verPerfil(Request $req){
         if(Auth::check())
-      return view('usuarios.usuario');
+      {
+        $misNoticias = noticia::where("idUsuario",Auth::user()->idUsuario)->where("activa",1)->get();
+        $misReviews = review::where("idUsuario", Auth::user()->idUsuario)->where("activa",1)->get();
+        return view('usuarios.usuario', ["noticias"=>$misNoticias, "reviews" => $misReviews]);
+      }
       else {
         return redirect()->route("login")->with('mensaje_error','Debes haber iniciado sesion');
       }
@@ -62,4 +75,34 @@ class aplicacionController extends Controller
 
     }
 
+    public function buscarTexto(Request $req){
+      $texto = $req->input("textoBuscar");
+      $noticias = noticia::with("usuarios")->where('titulo', 'LIKE', '%'.$texto.'%')->paginate(5);
+      $reviews = review::with('usuarios')->where('titulo', 'LIKE', '%'.$texto.'%')->paginate(5);
+      return view("Busqueda",["noticias"=>$noticias, "reviews"=>$reviews]);
+    }
+
+
+    public function buscarFiltros(Request $req){
+      $titulo = $req->input('tituloParam');
+      $autor = $req->input('autorParam');
+      $fecha1 = $req->input('fecha1Param');
+      $fecha2 = $req->input('fecha2Param');
+      $busqueda = $req->input('busquedaParam');
+      switch($busqueda){
+        case 1:
+          $noticias = noticia::where("titulo",'LIKE', '%'.$titulo.'%')->get();
+          $reviews = review::where("titulo",'LIKE', '%'.$titulo.'%')->get();
+          echo $noticias.$reviews;
+          break;
+        case 2:
+          $noticias=DB::table('noticia')->join('usuario', function ($join) {
+          $join->on('usuario.idUsuario', '=', 'noticia.idUsuario')
+               ->where('usuario.nombre', 'LIKE', '%'.$autor.'%');
+             })->where("titulo","like","%".$titulo."%")->get();
+             echo $noticias;
+          break;
+      }
+
+    }
 }

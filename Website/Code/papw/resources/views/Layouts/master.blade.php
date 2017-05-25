@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="{{asset("css/bootstrap.min.css")}}">
   <link rel="stylesheet" type="text/css" href="{{asset("css/estilos/consistencia.css")}}">
   <link rel="stylesheet" type="text/css" href="@yield('estilo')" />
+  <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
   @section('estilos')
   @show
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -34,9 +35,9 @@
 
         <div class="collapse navbar-collapse  " id="navbar-1">
           <ul class="nav navbar-nav categorias">
-            <li class=""><a href="#" class="texto">Noticias</a></li>
-            <li><a href="" class="texto">Reseñas</a></li>
-            <li><a href="{{url('/juegos')}}" class="texto">Juegos</a></li>
+            <li class=""><a href="{{url('/todasNoticias')}}" class="texto">Noticias</a></li>
+            <li><a href="{{url('/todasReviews')}}" class="texto">Reseñas</a></li>
+            <li><a href="{{url('/TJuegos')}}" class="texto">Juegos</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right perfilUL ">
@@ -60,11 +61,12 @@
             <a href="{{route("logout")}}" class="texto">Salir</a>
           </li>
           </ul>
-          <form action="" class="navbar-form navbar-right" role="search">
+          <form method="post" action="/buscar" class="navbar-form navbar-right" role="search">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="buscar">
+              <input type="hidden" name="_token" id="token" value="{{csrf_token()}}">
+              <input type="text" id="buscar" class="form-control" placeholder="buscar" name="textoBuscar">
               <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                <button class="btn btn-secondary" type="submit" id="btnBuscar" ><span class="glyphicon glyphicon-search"></span></button>
               </span>
             </div>
           </form>
@@ -86,6 +88,9 @@
   <script type="text/javascript" src="{{asset("js/jcanvas.js")}}">  </script>
   <!--<script type="text/javascript" src="{{asset("js/calificacion.js")}}"></script>-->
   <script type="text/javascript" src="{{asset("js/vue.js")}}"></script>
+  <script type="text/javascript" src="{{asset("js/busquedaMaster.js")}}">
+  </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
   @section('scripts')
   @show
 
